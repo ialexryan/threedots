@@ -14,6 +14,8 @@
 		B300CCDE1A7906630033C753 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B300CCDC1A7906630033C753 /* Main.storyboard */; };
 		B300CCEA1A7906630033C753 /* threedotsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B300CCE91A7906630033C753 /* threedotsTests.m */; };
 		B388BD231A79E9A800D00D83 /* GlobalVars.m in Sources */ = {isa = PBXBuildFile; fileRef = B388BD221A79E9A800D00D83 /* GlobalVars.m */; };
+		B398CE491A7A1262000D8F3A /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B398CE481A7A1262000D8F3A /* Sparkle.framework */; };
+		B398CE4A1A7A126E000D8F3A /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B398CE481A7A1262000D8F3A /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +27,19 @@
 			remoteInfo = threedots;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B30A57051A7A11E800025526 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B398CE4A1A7A126E000D8F3A /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B300CCCD1A7906630033C753 /* threedots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = threedots.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +56,7 @@
 		B300CCE91A7906630033C753 /* threedotsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = threedotsTests.m; sourceTree = "<group>"; };
 		B388BD211A79E9A800D00D83 /* GlobalVars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalVars.h; sourceTree = "<group>"; };
 		B388BD221A79E9A800D00D83 /* GlobalVars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalVars.m; sourceTree = "<group>"; };
+		B398CE481A7A1262000D8F3A /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B398CE491A7A1262000D8F3A /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +84,7 @@
 				B300CCCF1A7906630033C753 /* threedots */,
 				B300CCE61A7906630033C753 /* threedotsTests */,
 				B300CCCE1A7906630033C753 /* Products */,
+				B398CE4B1A7A1287000D8F3A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +139,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B398CE4B1A7A1287000D8F3A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B398CE481A7A1262000D8F3A /* Sparkle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,6 +157,7 @@
 				B300CCC91A7906630033C753 /* Sources */,
 				B300CCCA1A7906630033C753 /* Frameworks */,
 				B300CCCB1A7906630033C753 /* Resources */,
+				B30A57051A7A11E800025526 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -339,8 +366,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = threedots/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_LDFLAGS = "-Wl,-rpath,@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -350,8 +382,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = threedots/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_LDFLAGS = "-Wl,-rpath,@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
