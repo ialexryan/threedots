@@ -21,8 +21,7 @@
 }
 
 - (NSString*)fetchJSSourceString {
-//    NSString *jsURLString = @"https://gist.github.com/raw/bf025703e11ee18c3dd1/";
-    NSString *jsURLString = @"https://gist.github.com/ialexryan/bf025703e11ee18c3dd1/raw/c4193cf5a0cd39feb8b19ec350131d3de40bcce3/threedots.js";
+    NSString *jsURLString = @"https://gist.github.com/raw/bf025703e11ee18c3dd1/";
     NSURL *jsURL = [NSURL URLWithString:jsURLString];
     NSString *jsSourceString = [NSString stringWithContentsOfURL:jsURL encoding:NSUTF8StringEncoding error:nil];
     NSLog(@"%@", jsSourceString);
