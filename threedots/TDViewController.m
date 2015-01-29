@@ -15,13 +15,11 @@
     NSString *jsURLString = @"https://gist.github.com/raw/bf025703e11ee18c3dd1/";
     NSURL *jsURL = [NSURL URLWithString:jsURLString];
     NSString *jsSourceString = [NSString stringWithContentsOfURL:jsURL encoding:NSUTF8StringEncoding error:nil];
-    NSLog(@"%@", jsSourceString);
     return jsSourceString;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"Executing first time load code");
     WKUserScript *userScript = [[WKUserScript alloc] initWithSource:[self fetchJSSourceString] injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
     
     WKUserContentController *userContentController = [[WKUserContentController alloc] init];
