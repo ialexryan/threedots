@@ -14,22 +14,39 @@
 - (void)viewWillAppear {
     [super viewWillAppear];
     
-    NSLog(@"%@", self.view.window);
     self.view.window.titleVisibility = NSWindowTitleHidden;
     self.view.window.titlebarAppearsTransparent = YES;
     self.view.window.movableByWindowBackground = YES;
 }
 
+- (NSString*)fetchJSSourceString {
+    NSString *jsURLstring = @"https://gist.github.com/raw/bf025703e11ee18c3dd1/";
+    NSURL *jsURL = [NSURL URLWithString:jsURLstring];
+    NSString *jsSourceString = [NSString stringWithContentsOfURL:jsURL encoding:NSUTF8StringEncoding error:nil];
+    NSLog(@"%@", jsSourceString);
+    return jsSourceString;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    WKWebViewConfiguration *theConfiguration = [[WKWebViewConfiguration alloc] init];
-    WKWebView *webView = [[WKWebView alloc] initWithFrame:self.view.frame configuration:theConfiguration];
-    NSURL *url=[NSURL URLWithString:@"http://app.asana.com"];
+    WKUserScript *userScript = [[WKUserScript alloc] initWithSource:[self fetchJSSourceString] injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
+    
+    WKUserContentController *userContentController = [[WKUserContentController alloc] init];
+    [userContentController addUserScript:userScript];
+    
+    WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
+    configuration.userContentController = userContentController;
+    WKWebView *webView = [[WKWebView alloc] initWithFrame:self.view.frame configuration:configuration];
+
+    NSURL *url=[NSURL URLWithString:@"https://app.asana.com"];
     NSURLRequest *request=[NSURLRequest requestWithURL:url];
+    
     [webView loadRequest:request];
     [self.view addSubview:webView];
+    
     webView.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
+    
 }
 
 - (void)setRepresentedObject:(id)representedObject {
