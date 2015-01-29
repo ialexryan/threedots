@@ -6,22 +6,10 @@
 //  Copyright (c) 2015 Alex Ryan. All rights reserved.
 //
 
-#import "AppDelegate.h"
 #import "ViewController.h"
 @import WebKit;
 
 @implementation ViewController
-
-- (void)viewWillAppear {
-    [super viewWillAppear];
-    
-    AppDelegate *appDelegate = [[NSApplication sharedApplication] delegate];
-    appDelegate.windowController = self.view.window.windowController;
-    
-    self.view.window.titleVisibility = NSWindowTitleHidden;
-    self.view.window.titlebarAppearsTransparent = YES;
-    self.view.window.movableByWindowBackground = YES;
-}
 
 - (NSString*)fetchJSSourceString {
     NSString *jsURLString = @"https://gist.github.com/raw/bf025703e11ee18c3dd1/";
