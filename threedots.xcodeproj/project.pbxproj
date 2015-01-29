@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B300CCD41A7906630033C753 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B300CCD31A7906630033C753 /* AppDelegate.m */; };
 		B300CCD61A7906630033C753 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B300CCD51A7906630033C753 /* main.m */; };
-		B300CCD91A7906630033C753 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B300CCD81A7906630033C753 /* ViewController.m */; };
 		B300CCDB1A7906630033C753 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B300CCDA1A7906630033C753 /* Images.xcassets */; };
 		B300CCDE1A7906630033C753 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B300CCDC1A7906630033C753 /* Main.storyboard */; };
 		B300CCEA1A7906630033C753 /* threedotsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B300CCE91A7906630033C753 /* threedotsTests.m */; };
@@ -18,6 +17,7 @@
 		B398CE4E1A7A1FEF000D8F3A /* dsa_priv.pem in Resources */ = {isa = PBXBuildFile; fileRef = B398CE4C1A7A1FEF000D8F3A /* dsa_priv.pem */; };
 		B398CE4F1A7A1FEF000D8F3A /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = B398CE4D1A7A1FEF000D8F3A /* dsa_pub.pem */; };
 		B398CE541A7A58DA000D8F3A /* TDWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B398CE531A7A58DA000D8F3A /* TDWindowController.m */; };
+		B398CE571A7A5A37000D8F3A /* TDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B398CE561A7A5A37000D8F3A /* TDViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +49,6 @@
 		B300CCD21A7906630033C753 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B300CCD31A7906630033C753 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B300CCD51A7906630033C753 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B300CCD71A7906630033C753 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B300CCD81A7906630033C753 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B300CCDA1A7906630033C753 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B300CCDD1A7906630033C753 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B300CCE31A7906630033C753 /* threedotsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = threedotsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +59,8 @@
 		B398CE4D1A7A1FEF000D8F3A /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		B398CE521A7A58DA000D8F3A /* TDWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDWindowController.h; sourceTree = "<group>"; };
 		B398CE531A7A58DA000D8F3A /* TDWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDWindowController.m; sourceTree = "<group>"; };
+		B398CE551A7A5A37000D8F3A /* TDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDViewController.h; sourceTree = "<group>"; };
+		B398CE561A7A5A37000D8F3A /* TDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +107,8 @@
 				B398CE511A7A2004000D8F3A /* Resources */,
 				B300CCD21A7906630033C753 /* AppDelegate.h */,
 				B300CCD31A7906630033C753 /* AppDelegate.m */,
-				B300CCD71A7906630033C753 /* ViewController.h */,
-				B300CCD81A7906630033C753 /* ViewController.m */,
+				B398CE551A7A5A37000D8F3A /* TDViewController.h */,
+				B398CE561A7A5A37000D8F3A /* TDViewController.m */,
 				B398CE521A7A58DA000D8F3A /* TDWindowController.h */,
 				B398CE531A7A58DA000D8F3A /* TDWindowController.m */,
 				B300CCDA1A7906630033C753 /* Images.xcassets */,
@@ -264,7 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B300CCD91A7906630033C753 /* ViewController.m in Sources */,
+				B398CE571A7A5A37000D8F3A /* TDViewController.m in Sources */,
 				B300CCD61A7906630033C753 /* main.m in Sources */,
 				B300CCD41A7906630033C753 /* AppDelegate.m in Sources */,
 				B398CE541A7A58DA000D8F3A /* TDWindowController.m in Sources */,

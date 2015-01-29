@@ -1,15 +1,15 @@
 //
-//  ViewController.m
+//  TDViewController.m
 //  threedots
 //
-//  Created by Alex Ryan on 1/28/15.
+//  Created by Alex Ryan on 1/29/15.
 //  Copyright (c) 2015 Alex Ryan. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "TDViewController.h"
 @import WebKit;
 
-@implementation ViewController
+@implementation TDViewController
 
 - (NSString*)fetchJSSourceString {
     NSString *jsURLString = @"https://gist.github.com/raw/bf025703e11ee18c3dd1/";
@@ -44,7 +44,7 @@
 
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];
-
+    
     // Update the view, if already loaded.
 }
 

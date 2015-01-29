@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  TDViewController.h
 //  threedots
 //
-//  Created by Alex Ryan on 1/28/15.
+//  Created by Alex Ryan on 1/29/15.
 //  Copyright (c) 2015 Alex Ryan. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
 
-@interface ViewController : NSViewController
-
+@interface TDViewController : NSViewController
 
 @end
-
