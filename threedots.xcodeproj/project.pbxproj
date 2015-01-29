@@ -89,6 +89,7 @@
 				B300CCE61A7906630033C753 /* threedotsTests */,
 				B300CCCE1A7906630033C753 /* Products */,
 				B398CE4B1A7A1287000D8F3A /* Frameworks */,
+				B398CE511A7A2004000D8F3A /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,7 +105,6 @@
 		B300CCCF1A7906630033C753 /* threedots */ = {
 			isa = PBXGroup;
 			children = (
-				B398CE511A7A2004000D8F3A /* Resources */,
 				B300CCD21A7906630033C753 /* AppDelegate.h */,
 				B300CCD31A7906630033C753 /* AppDelegate.m */,
 				B398CE551A7A5A37000D8F3A /* TDViewController.h */,
@@ -159,6 +159,7 @@
 				B398CE4D1A7A1FEF000D8F3A /* dsa_pub.pem */,
 			);
 			name = Resources;
+			path = threedots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
