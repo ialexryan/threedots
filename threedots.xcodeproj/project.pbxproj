@@ -13,7 +13,6 @@
 		B300CCDB1A7906630033C753 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B300CCDA1A7906630033C753 /* Images.xcassets */; };
 		B300CCDE1A7906630033C753 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B300CCDC1A7906630033C753 /* Main.storyboard */; };
 		B300CCEA1A7906630033C753 /* threedotsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B300CCE91A7906630033C753 /* threedotsTests.m */; };
-		B388BD231A79E9A800D00D83 /* GlobalVars.m in Sources */ = {isa = PBXBuildFile; fileRef = B388BD221A79E9A800D00D83 /* GlobalVars.m */; };
 		B398CE491A7A1262000D8F3A /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B398CE481A7A1262000D8F3A /* Sparkle.framework */; };
 		B398CE4A1A7A126E000D8F3A /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B398CE481A7A1262000D8F3A /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B398CE4E1A7A1FEF000D8F3A /* dsa_priv.pem in Resources */ = {isa = PBXBuildFile; fileRef = B398CE4C1A7A1FEF000D8F3A /* dsa_priv.pem */; };
@@ -56,8 +55,6 @@
 		B300CCE31A7906630033C753 /* threedotsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = threedotsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B300CCE81A7906630033C753 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B300CCE91A7906630033C753 /* threedotsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = threedotsTests.m; sourceTree = "<group>"; };
-		B388BD211A79E9A800D00D83 /* GlobalVars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalVars.h; sourceTree = "<group>"; };
-		B388BD221A79E9A800D00D83 /* GlobalVars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalVars.m; sourceTree = "<group>"; };
 		B398CE481A7A1262000D8F3A /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		B398CE4C1A7A1FEF000D8F3A /* dsa_priv.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_priv.pem; sourceTree = "<group>"; };
 		B398CE4D1A7A1FEF000D8F3A /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
@@ -109,8 +106,6 @@
 				B300CCD31A7906630033C753 /* AppDelegate.m */,
 				B300CCD71A7906630033C753 /* ViewController.h */,
 				B300CCD81A7906630033C753 /* ViewController.m */,
-				B388BD211A79E9A800D00D83 /* GlobalVars.h */,
-				B388BD221A79E9A800D00D83 /* GlobalVars.m */,
 				B300CCDA1A7906630033C753 /* Images.xcassets */,
 				B300CCDC1A7906630033C753 /* Main.storyboard */,
 				B300CCD01A7906630033C753 /* Supporting Files */,
@@ -264,7 +259,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B388BD231A79E9A800D00D83 /* GlobalVars.m in Sources */,
 				B300CCD91A7906630033C753 /* ViewController.m in Sources */,
 				B300CCD61A7906630033C753 /* main.m in Sources */,
 				B300CCD41A7906630033C753 /* AppDelegate.m in Sources */,
