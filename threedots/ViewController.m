@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "GlobalVars.h"
 @import WebKit;
 
 @implementation ViewController
@@ -20,8 +21,9 @@
 }
 
 - (NSString*)fetchJSSourceString {
-    NSString *jsURLstring = @"https://gist.github.com/raw/bf025703e11ee18c3dd1/";
-    NSURL *jsURL = [NSURL URLWithString:jsURLstring];
+//    NSString *jsURLString = @"https://gist.github.com/raw/bf025703e11ee18c3dd1/";
+    NSString *jsURLString = @"https://gist.github.com/ialexryan/bf025703e11ee18c3dd1/raw/50f43f3711e6d908ca51b78de710d27bc280faae/threedots.js";
+    NSURL *jsURL = [NSURL URLWithString:jsURLString];
     NSString *jsSourceString = [NSString stringWithContentsOfURL:jsURL encoding:NSUTF8StringEncoding error:nil];
     NSLog(@"%@", jsSourceString);
     return jsSourceString;
@@ -30,23 +32,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    WKUserScript *userScript = [[WKUserScript alloc] initWithSource:[self fetchJSSourceString] injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
-    
-    WKUserContentController *userContentController = [[WKUserContentController alloc] init];
-    [userContentController addUserScript:userScript];
-    
-    WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
-    configuration.userContentController = userContentController;
-    WKWebView *webView = [[WKWebView alloc] initWithFrame:self.view.frame configuration:configuration];
+    if (!([GlobalVars sharedInstance].webView)) {
+        NSLog(@"Executing first time load code");
+        WKUserScript *userScript = [[WKUserScript alloc] initWithSource:[self fetchJSSourceString] injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
+        
+        WKUserContentController *userContentController = [[WKUserContentController alloc] init];
+        [userContentController addUserScript:userScript];
+        
+        WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
+        configuration.userContentController = userContentController;
+        [GlobalVars sharedInstance].webView = [[WKWebView alloc] initWithFrame:self.view.frame configuration:configuration];
+        
+        NSURL *url=[NSURL URLWithString:@"https://app.asana.com"];
+        NSURLRequest *request=[NSURLRequest requestWithURL:url];
+        
+        [[GlobalVars sharedInstance].webView loadRequest:request];
+        
+        [GlobalVars sharedInstance].webView.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
+    }
 
-    NSURL *url=[NSURL URLWithString:@"https://app.asana.com"];
-    NSURLRequest *request=[NSURLRequest requestWithURL:url];
-    
-    [webView loadRequest:request];
-    [self.view addSubview:webView];
-    
-    webView.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
-    
+    [self.view addSubview:[GlobalVars sharedInstance].webView];
+
 }
 
 - (void)setRepresentedObject:(id)representedObject {
