@@ -43,12 +43,13 @@
     {
       "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "FluidIcon.png",
+      "filename" : "icon.png",
       "scale" : "1x"
     },
     {
-      "idiom" : "mac",
       "size" : "512x512",
+      "idiom" : "mac",
+      "filename" : "icon@2x.png",
       "scale" : "2x"
     }
   ],
