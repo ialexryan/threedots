@@ -14,7 +14,6 @@
 		B300CCEA1A7906630033C753 /* threedotsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B300CCE91A7906630033C753 /* threedotsTests.m */; };
 		B398CE491A7A1262000D8F3A /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B398CE481A7A1262000D8F3A /* Sparkle.framework */; };
 		B398CE4A1A7A126E000D8F3A /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B398CE481A7A1262000D8F3A /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B398CE4E1A7A1FEF000D8F3A /* dsa_priv.pem in Resources */ = {isa = PBXBuildFile; fileRef = B398CE4C1A7A1FEF000D8F3A /* dsa_priv.pem */; };
 		B398CE4F1A7A1FEF000D8F3A /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = B398CE4D1A7A1FEF000D8F3A /* dsa_pub.pem */; };
 		B398CE541A7A58DA000D8F3A /* TDWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B398CE531A7A58DA000D8F3A /* TDWindowController.m */; };
 		B398CE571A7A5A37000D8F3A /* TDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B398CE561A7A5A37000D8F3A /* TDViewController.m */; };
@@ -55,7 +54,6 @@
 		B300CCE81A7906630033C753 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B300CCE91A7906630033C753 /* threedotsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = threedotsTests.m; sourceTree = "<group>"; };
 		B398CE481A7A1262000D8F3A /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
-		B398CE4C1A7A1FEF000D8F3A /* dsa_priv.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_priv.pem; sourceTree = "<group>"; };
 		B398CE4D1A7A1FEF000D8F3A /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		B398CE521A7A58DA000D8F3A /* TDWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDWindowController.h; sourceTree = "<group>"; };
 		B398CE531A7A58DA000D8F3A /* TDWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDWindowController.m; sourceTree = "<group>"; };
@@ -155,7 +153,6 @@
 		B398CE511A7A2004000D8F3A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B398CE4C1A7A1FEF000D8F3A /* dsa_priv.pem */,
 				B398CE4D1A7A1FEF000D8F3A /* dsa_pub.pem */,
 			);
 			name = Resources;
@@ -247,7 +244,6 @@
 				B300CCDB1A7906630033C753 /* Images.xcassets in Resources */,
 				B398CE4F1A7A1FEF000D8F3A /* dsa_pub.pem in Resources */,
 				B300CCDE1A7906630033C753 /* Main.storyboard in Resources */,
-				B398CE4E1A7A1FEF000D8F3A /* dsa_priv.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
