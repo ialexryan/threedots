@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TDWindowController.h"
 
 @interface AppDelegate ()
 
@@ -31,6 +32,14 @@
 // This shows the app if the window is closed and the user command-tabs to the application
 - (void)applicationWillBecomeActive:(NSNotification *)notification {
     [self.windowController.window makeKeyAndOrderFront:self];
+}
+
+
+// If the user clicks file > new, make a new window
+- (IBAction)newWindow:(id)sender {
+//    NSStoryboard *sb = [NSStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+//    TDWindowController *wc =[sb instantiateInitialController];
+//    [wc.window makeKeyAndOrderFront:self];
 }
 
 @end
