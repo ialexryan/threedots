@@ -28,6 +28,7 @@
     WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
     configuration.userContentController = userContentController;
     WKWebView *webView = [[WKWebView alloc] initWithFrame:self.view.frame configuration:configuration];
+    webView.navigationDelegate = self;
     
     NSURL *url=[NSURL URLWithString:@"https://app.asana.com"];
     NSURLRequest *request=[NSURLRequest requestWithURL:url];
@@ -38,6 +39,21 @@
     
     [self.view addSubview:webView];
     
+}
+
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
+{
+    NSURL *destinationURL = navigationAction.request.URL;
+    
+    // If the URL doesn't end in .asana.com and was manually clicked by the user
+    if (navigationAction.navigationType == WKNavigationTypeLinkActivated && (![destinationURL.host.lowercaseString hasSuffix:@".asana.com"])){
+        // Open in the default browser
+        [[NSWorkspace sharedWorkspace] openURL:destinationURL];
+        // And don't go there in the WKWebView
+        decisionHandler(WKNavigationActionPolicyCancel);
+        return;
+    }
+    decisionHandler(WKNavigationActionPolicyAllow);
 }
 
 - (void)setRepresentedObject:(id)representedObject {

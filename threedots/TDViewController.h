@@ -7,7 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
+@import WebKit;
 
-@interface TDViewController : NSViewController
+@interface TDViewController : NSViewController <WKNavigationDelegate>
 
 @end
