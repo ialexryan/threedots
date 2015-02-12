@@ -12,7 +12,7 @@
 @implementation TDViewController
 
 - (NSString*)fetchJSSourceString {
-    NSString *jsURLString = @"https://gist.github.com/raw/bf025703e11ee18c3dd1/";
+    NSString *jsURLString = @"http://threedotsapp.com/threedots.js";
     NSURL *jsURL = [NSURL URLWithString:jsURLString];
     NSString *jsSourceString = [NSString stringWithContentsOfURL:jsURL encoding:NSUTF8StringEncoding error:nil];
     return jsSourceString;
