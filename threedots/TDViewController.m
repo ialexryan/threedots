@@ -45,11 +45,12 @@
 {
     NSURL *destinationURL = navigationAction.request.URL;
     
-    // If the URL doesn't end in .asana.com and was manually clicked by the user
-    if (navigationAction.navigationType == WKNavigationTypeLinkActivated && (![destinationURL.host.lowercaseString hasSuffix:@".asana.com"])){
-        // Open in the default browser
+    // If the URL
+    //  (was manually clicked by the user                                  AND (doesn't end in .asana.com                                       OR contains the "download_asset" string)
+    if ((navigationAction.navigationType == WKNavigationTypeLinkActivated) && ((![destinationURL.host.lowercaseString hasSuffix:@".asana.com"]) || [destinationURL.absoluteString containsString:@"app.asana.com/app/asana/-/download_asset?asset_id="])){
+        // Then open it in the default browser
         [[NSWorkspace sharedWorkspace] openURL:destinationURL];
-        // And don't go there in the WKWebView
+        // And don't open it in the WKWebView
         decisionHandler(WKNavigationActionPolicyCancel);
         return;
     }
