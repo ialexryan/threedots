@@ -9,6 +9,6 @@
 #import <Cocoa/Cocoa.h>
 @import WebKit;
 
-@interface TDViewController : NSViewController <WKNavigationDelegate>
+@interface TDViewController : NSViewController <WKNavigationDelegate, WKUIDelegate>
 
 @end
