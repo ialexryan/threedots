@@ -1,5 +1,6 @@
+document.body.style.background="#ECECEC";
+
 var cssSetup = function() {
-	document.body.style.background="#ECECEC";
 	var css = "body{border-top-width: 0px !important;} #header{border-top-width: 0px !important;} #add_from_computer,#add_from_gdrive,#add_from_box{display: none;} /*#google_auth_row{display: none;} #google_auth_separator{display:none;}*/ /*#logo{padding-left: 64px;}*/ ";
 	head = document.head || document.getElementsByTagName( 'head' )[ 0 ];
 	style = document.createElement( 'style' );
