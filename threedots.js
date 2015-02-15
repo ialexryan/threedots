@@ -2,7 +2,7 @@ document.body.style.background="#ECECEC";
 
 var css = "body{border-top-width: 0px !important;} #header{border-top-width: 0px !important;} #add_from_computer,#add_from_gdrive,#add_from_box{display: none;} /*#google_auth_row{display: none;} #google_auth_separator{display:none;}*/ /*#logo{padding-left: 64px;}*/ ";
 
-var cssSetup = function() {
+cssSetup = function() {
 	head = document.head || document.getElementsByTagName( 'head' )[ 0 ];
 	style = document.createElement( 'style' );
 	style.type = 'text/css';
@@ -14,7 +14,7 @@ var cssSetup = function() {
 	head.appendChild( style );
 };
 
-var disableGoogleLogin = function() {
+disableGoogleLogin = function() {
 	var gauth_button = document.getElementById("google_auth_button");
 	gauth_button.onclick = function (event) {
 		alert("Threedots does not currently support Google login.\nPlease open app.asana.com in Safari, log in, and then relaunch threedots.");
