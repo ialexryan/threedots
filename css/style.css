@@ -55,7 +55,7 @@
 		top: 0.5em;
 		font-size: 0.8em;
 	}
-	
+
 	sup
 	{
 		position: relative;
@@ -87,7 +87,7 @@
 		color: #1f8dd8;
 		text-decoration: underline;
 	}
-	
+
 		a:hover
 		{
 			text-decoration: none;
@@ -105,18 +105,18 @@
 		height: 1px;
 		margin: 2em 0 2em 0;
 	}
-		
+
 	p, ul, ol, dl, table
 	{
 		margin-bottom: 2em;
 	}
 
 	/* Form */
-	
+
 		form
 		{
 		}
-		
+
 			form label
 			{
 				display: block;
@@ -124,7 +124,7 @@
 				font-weight: 400;
 				margin: 0 0 0.5em 0;
 			}
-	
+
 			form input[type=text],
 			form input[type=email],
 			form input[type=password],
@@ -155,7 +155,7 @@
 			{
 				height: 15em;
 			}
-			
+
 			form .formerize-placeholder
 			{
 				color: #555 !important;
@@ -187,12 +187,12 @@
 			}
 
 	/* Tables */
-	
+
 		table
 		{
 			width: 100%;
 		}
-		
+
 			table.default
 			{
 				width: 100%;
@@ -207,12 +207,12 @@
 					{
 						border-top: 0;
 					}
-			
+
 				table.default td
 				{
 					padding: 0.5em 1em 0.5em 1em;
 				}
-				
+
 				table.default th
 				{
 					text-align: left;
@@ -220,28 +220,28 @@
 					font-weight: 700;
 					margin: 0 0 1em 0;
 				}
-			
+
 				table.default thead
 				{
 					border-bottom: solid 2px #dddddd;
 				}
-				
+
 				table.default tfoot
 				{
 				}
-				
+
 				table.default tbody
 				{
 				}
 
 	/* Section/Article */
-	
+
 		section,
 		article
 		{
 			margin-bottom: 2.5em;
 		}
-		
+
 			section > :last-child,
 			article > :last-child
 			{
@@ -289,7 +289,7 @@
 			background: #ffffff;
 			border-bottom: solid 1px #ccc;
 		}
-		
+
 			.box .image.featured
 			{
 				position: relative;
@@ -297,7 +297,7 @@
 			}
 
 	/* Button */
-		
+
 		input[type="button"],
 		input[type="submit"],
 		input[type="reset"],
@@ -327,7 +327,7 @@
 			{
 				background: #2f9de8;
 			}
-			
+
 			input[type="button"]:active,
 			input[type="submit"]:active,
 			input[type="reset"]:active,
@@ -335,7 +335,7 @@
 			{
 				background: #c51349;
 			}
-		
+
 			input[type="button"].alt,
 			input[type="submit"].alt,
 			input[type="reset"].alt,
@@ -351,7 +351,7 @@
 				{
 					background: #353132;
 				}
-				
+
 				input[type="button"].alt:active,
 				input[type="submit"].alt:active,
 				input[type="reset"].alt:active,
@@ -359,11 +359,11 @@
 				{
 					background: #151112;
 				}
-		
+
 			.button.icon
 			{
 			}
-			
+
 				.button.icon:before
 				{
 					opacity: 0.35;
@@ -379,7 +379,7 @@
 			display: inline-block;
 			outline: 0;
 		}
-		
+
 			.image img
 			{
 				display: block;
@@ -404,7 +404,7 @@
 				width: 100%;
 				margin: 0 0 2em 0;
 			}
-			
+
 			.image.left
 			{
 				float: left;
@@ -422,12 +422,12 @@
 				list-style: disc;
 				padding-left: 1em;
 			}
-			
+
 				ul.default li
 				{
 					padding-left: 0.5em;
 				}
-				
+
 			ul.contact
 			{
 			}
@@ -451,7 +451,7 @@
 					{
 						margin: 0;
 					}
-				
+
 				ul.contact li:first-child
 				{
 					padding-top: 0;
@@ -462,11 +462,11 @@
 					{
 						top: 0;
 					}
-		
+
 			ul.dates
 			{
 			}
-			
+
 				ul.dates li
 				{
 					position: relative;
@@ -500,19 +500,19 @@
 						border-top: solid 1.8em transparent;
 						border-bottom: solid 1.8em transparent;
 					}
-				
+
 					ul.dates .date strong
 					{
 						display: block;
 						font-size: 1.75em;
 						padding-top: 0.15em;
 					}
-					
+
 				ul.dates h3
 				{
 					font-size: 1.1em;
 				}
-					
+
 				ul.dates p
 				{
 					margin: 0;
@@ -523,7 +523,7 @@
 					border-top: 0;
 					padding-top: 0;
 				}
-				
+
 					ul.dates li:first-child .date
 					{
 						top: 0;
@@ -532,19 +532,19 @@
 			ul.divided
 			{
 			}
-			
+
 				ul.divided li
 				{
 					border-top: solid 1px #ddd;
 					padding: 1em 0 1em 0;
 				}
-				
+
 				ul.divided li:first-child
 				{
 					border-top: 0;
 					padding-top: 0;
 				}
-			
+
 			ul.social
 			{
 				overflow: hidden;
@@ -575,14 +575,14 @@
 					-ms-transition: background-color .25s ease-in-out;
 					transition: background-color .25s ease-in-out;
 				}
-				
+
 					ul.social li a:before
 					{
 						color: #fff;
 						font-size: 2em;
 						line-height: 1.5em;
 					}
-				
+
 				ul.social li a.fa-facebook			{ background: #3c5a98; }
 				ul.social li a.fa-facebook:hover	{ background: #4c6aa8; }
 				ul.social li a.fa-twitter			{ background: #2daae4; }
@@ -598,7 +598,7 @@
 
 		ol
 		{
-		}	
+		}
 
 			ol.default
 			{
@@ -652,7 +652,7 @@
 				line-height: 1em;
 				color: #fff;
 			}
-					
+
 			.icon.featured:after
 			{
 				content: '';
@@ -668,7 +668,7 @@
 			{
 				background-color: #252122;
 			}
-			
+
 				.icon.featured.alt:after
 				{
 					border-top-color: #252122;
@@ -678,12 +678,12 @@
 			{
 				background-color: #827a7c;
 			}
-			
+
 				.icon.featured.alt2:after
 				{
 					border-top-color: #827a7c;
 				}
-							
+
 /*********************************************************************************/
 /* Banner                                                                        */
 /*********************************************************************************/
@@ -702,13 +702,13 @@
 			background-color: #252122;
 			background-color: rgba(34,30,31,0.98);
 		}
-		
+
 			#banner header h2
 			{
 				color: #fff;
 				font-weight: 700;
 			}
-			
+
 			#banner header p
 			{
 				color: #1f8dd8;
@@ -746,16 +746,16 @@
 			z-index: 0;
 			opacity: 0.1;
 		}
-		
+
 		#main-wrapper .major
 		{
 		}
-		
+
 			#main-wrapper .major h2
 			{
 				background: #f7f7f7 url('images/bg02.png');
 			}
-	
+
 	#footer-wrapper
 	{
 		position: relative;
@@ -774,12 +774,12 @@
 			z-index: 0;
 			opacity: 0.5;
 		}
-	
+
 		#footer-wrapper a
 		{
 			color: #c5c4c4;
 		}
-		
+
 		#footer-wrapper h2,
 		#footer-wrapper h3,
 		#footer-wrapper h4,
@@ -791,11 +791,11 @@
 			color: #fff;
 		}
 
-		#footer-wrapper h1 a, 
-		#footer-wrapper h2 a, 
-		#footer-wrapper h3 a, 
-		#footer-wrapper h4 a, 
-		#footer-wrapper h5 a, 
+		#footer-wrapper h1 a,
+		#footer-wrapper h2 a,
+		#footer-wrapper h3 a,
+		#footer-wrapper h4 a,
+		#footer-wrapper h5 a,
 		#footer-wrapper h6 a
 		{
 			color: inherit;
@@ -818,7 +818,7 @@
 			border-top-color: #353434;
 			border-top-color: rgba(255,255,255,0.05);
 		}
-		
+
 /*********************************************************************************/
 /* Intro                                                                         */
 /*********************************************************************************/
@@ -827,16 +827,16 @@
 	{
 		text-align: center;
 	}
-	
+
 /*********************************************************************************/
 /* Copyright                                                                     */
 /*********************************************************************************/
 
 	#copyright
-	{	
+	{
 		text-align: center;
 	}
-	
+
 		#copyright .links
 		{
 			display: inline-block;
