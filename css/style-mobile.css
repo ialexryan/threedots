@@ -146,6 +146,7 @@
 	#titleBar
 	{
 		background: none;
+		display: none;
 	}
 
 		#titleBar .title
@@ -157,6 +158,7 @@
 	{
 		width: 80px;
 		height: 60px;
+		display: none;
 	}
 
 		#titleBar .toggle:before
